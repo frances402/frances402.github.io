@@ -1,4 +1,14 @@
-# frances402.github.io
+#Frances Lee Portfolio
 
-This portfolio was built using a template authored by Ryan Fitzgerald. I would like to acknowledge and express my appreciation for his work. The original template can be found at [Link to Ryan Fitzgerald's GitHub](https://github.com/RyanFitzgerald/devportfolio). I have edited and made necessary changes to better suit my personal portfolio.
+A responsive personal portfolio showcasing my projects.
 
+##Project Structure
+- `index.html contains the main page content and semantic structure.
+- `css/portfolio.css defines the core layout, responsive behavior, typography, and visual theme.
+- `css/screenshots.css contains styles for project previews and device mockups.
+- `js/portfolio.js handles theme switching, scroll reveals, header behavior, and project card interactions.
+- `images/ contains project screenshots and visual assets.
+
+##Deployment
+
+The portfolio is built as a static site with no build step required and can be deployed directly through GitHub Pages.

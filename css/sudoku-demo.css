@@ -1,0 +1,103 @@
+.project-demo-button {
+  align-items: center;
+  align-self: flex-start;
+  background: #11120f;
+  border: 0;
+  border-radius: 999px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font: 600 .85rem "DM Sans", sans-serif;
+  gap: 24px;
+  margin-top: 28px;
+  padding: 13px 18px;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.project-demo-button:hover {
+  box-shadow: 0 12px 28px rgba(0, 0, 0, .16);
+  transform: translateY(-2px);
+}
+
+.sudoku-dialog {
+  background: transparent;
+  border: 0;
+  height: min(94dvh, 940px);
+  inset: 0;
+  margin: auto;
+  max-height: none;
+  max-width: 760px;
+  padding: 0;
+  overflow: visible;
+  position: fixed;
+  width: calc(100% - 32px);
+}
+
+.sudoku-dialog::backdrop {
+  backdrop-filter: blur(18px);
+  background: rgba(9, 11, 17, .76);
+}
+
+.sudoku-frame {
+  background: #f8f7f3;
+  border-radius: 28px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.sudoku-popup-close {
+  align-items: center;
+  background: #202a39;
+  border: 2px solid rgba(255,255,255,.85);
+  border-radius: 50%;
+  box-shadow: 0 8px 24px rgba(0,0,0,.24);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  font-size: 1.7rem;
+  height: 44px;
+  justify-content: center;
+  line-height: 1;
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  width: 44px;
+  z-index: 10;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.sudoku-frame iframe {
+  border: 0;
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+@media (max-width: 520px) {
+  .sudoku-dialog {
+    height: 100dvh;
+    width: 100%;
+  }
+
+  .sudoku-frame {
+    border-radius: 0;
+  }
+
+  .sudoku-popup-close {
+    right: 10px;
+    top: 10px;
+  }
+}

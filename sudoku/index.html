@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f7f6f2">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+  <title>Calm Sudoku</title>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="brand">calm <i>•</i> sudoku</div>
+      <button class="icon-button" id="menu-button" aria-label="Choose a new puzzle">☰</button>
+    </header>
+    <div class="game-meta">
+      <div class="difficulty" id="difficulty">Easy</div>
+      <div class="game-stats">
+        <div class="mistakes">Mistakes <b id="mistake-count">0</b></div>
+        <div class="timer" id="timer">00:00</div>
+      </div>
+    </div>
+    <section class="board" id="board" aria-label="Sudoku board"></section>
+    <div class="number-pad" id="number-pad" aria-label="Enter a number"></div>
+    <div class="tool-bar">
+      <button class="tool" id="erase-button"><span>⌫</span>Erase</button>
+      <button class="tool" id="notes-button"><span>✎</span>Notes</button>
+      <button class="tool" id="undo-button"><span>↶</span>Undo</button>
+      <button class="tool hint" id="hint-button"><span>✦</span><b id="hint-count">Hint 3/3</b></button>
+    </div>
+    <button class="new-puzzle" id="new-puzzle-button">New puzzle</button>
+  </main>
+
+  <div class="sheet" id="difficulty-sheet" aria-hidden="true">
+    <div class="panel">
+      <h2>Choose a puzzle</h2>
+      <p>Pick a difficulty and take a quiet moment.</p>
+      <div class="levels">
+        <button class="level" data-level="easy">Easy <small>approx. 4 min</small></button>
+        <button class="level" data-level="medium">Medium <small>approx. 9 min</small></button>
+        <button class="level" data-level="hard">Hard <small>approx. 16 min</small></button>
+      </div>
+    </div>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>

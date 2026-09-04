@@ -1,266 +1,169 @@
-<!DOCTYPE html>
-<html class="no-js" lang="en">
-
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Portfolio</title>
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f4f0">
+  <meta name="description" content="Frances Lee is a senior software developer creating reliable cloud applications and thoughtful digital experiences.">
+  <title>Frances Lee — Senior Software Developer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&amp;family=Manrope:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/portfolio.css">
+  <link rel="stylesheet" href="css/screenshots.css">
+  <link rel="stylesheet" href="css/sudoku-demo.css">
 </head>
+<body class="is-locked">
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<body>
-    <div id="mobile-menu-open" class="shadow-large">
-        <i class="fa fa-bars" aria-hidden="true"></i>
+  <div class="access-gate" role="dialog" aria-modal="true" aria-labelledby="access-title" data-access-gate>
+    <form class="access-card" data-access-form>
+      <a class="brand" href="#" aria-label="Frances Lee portfolio">FL<span>.</span></a>
+      <p class="eyebrow">Private portfolio</p>
+      <h1 id="access-title">Welcome.</h1>
+      <p>Enter the passcode to view my work.</p>
+      <label for="portfolio-passcode">Passcode</label>
+      <div class="access-input">
+        <input id="portfolio-passcode" name="passcode" type="password" inputmode="numeric" autocomplete="current-password" maxlength="3" required data-access-input>
+        <button type="submit" aria-label="Unlock portfolio">→</button>
+      </div>
+      <p class="access-error" role="alert" data-access-error></p>
+    </form>
+  </div>
+
+  <header class="site-header" data-header>
+    <a class="brand" href="#top" aria-label="Frances Lee, home">FL<span>.</span></a>
+    <nav aria-label="Primary navigation">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="false" data-theme-toggle>
+      <span class="theme-toggle__sun" aria-hidden="true">☼</span>
+      <span class="theme-toggle__moon" aria-hidden="true">◐</span>
+    </button>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero__glow hero__glow--one" aria-hidden="true"></div>
+      <div class="hero__glow hero__glow--two" aria-hidden="true"></div>
+      <p class="eyebrow reveal">Senior software developer · New York</p>
+      <h1 class="reveal">I build reliable products<br><span>from idea to production.</span></h1>
+      <p class="hero__intro reveal">I’m Frances Lee, a senior software developer who loves building across the stack, from intuitive front-end experiences to reliable backend systems and scalable APIs.</p>
+      <div class="hero__actions reveal">
+        <a class="button button--primary" href="#work">Explore my work <span aria-hidden="true">↓</span></a>
+        <a class="button button--quiet" href="Frances Lee Resume.pdf" download>Download resume</a>
+      </div>
+    </section>
+
+    <section class="work section" id="work">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow">Apps & Experiences</p>
+          <h2>Built to feel simple.</h2>
+        </div>
+      </div>
+
+      <article class="project project--sudoku reveal" data-tilt>
+        <div class="project__copy">
+          <div class="project__meta"><span>01</span><span>Web app</span></div>
+          <h3>Sudoku</h3>
+          <p>A calm, focused take on the classic logic puzzle. Designed to make every move clear and every solved board satisfying.</p>
+          <div class="tags" aria-label="Technologies used">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          </div>
+          <button class="project-demo-button" type="button" data-open-sudoku>Play Sudoku <span aria-hidden="true">↗</span></button>
+        </div>
+        <div class="project__art">
+          <div class="browser-device">
+            <div class="browser-device__bar" aria-hidden="true"><i></i><i></i><i></i></div>
+            <img src="images/calm-sudoku-screen.png" alt="Calm Sudoku game showing an easy puzzle, timer, and mistake counter">
+          </div>
+        </div>
+      </article>
+
+      <article class="project project--math reveal" data-tilt>
+        <div class="project__copy">
+          <div class="project__meta"><span>02</span><span>iOS app</span></div>
+          <h3>Math Page</h3>
+          <p>A simple, kid-friendly iOS app for practicing arithmetic through an unlimited supply of problems, making it easy to build confidence one answer at a time.</p>
+          <div class="tags" aria-label="Technologies used">
+            <span>Swift</span><span>StoreKit</span>
+          </div>
+          <a class="store-button" href="https://apps.apple.com/sg/app/math-page/id6801552444" aria-label="Download Math Page on the App Store">
+            <span class="apple" aria-hidden="true"></span>
+            <span><small>Download on the</small>App Store</span>
+          </a>
+        </div>
+        <div class="project__art">
+          <div class="iphone-device">
+            <img src="images/math-page-screen.png" alt="Math Page iOS app showing a completed subtraction practice problem">
+          </div>
+        </div>
+      </article>
+
+      <article class="project project--city reveal" data-tilt>
+        <div class="project__copy">
+          <div class="project__meta"><span>03</span><span>Upcoming web app</span></div>
+          <h3>City Pulse</h3>
+          <p>An upcoming web app designed to enhance the NYC experience by helping people discover the right places.</p>
+          <div class="tags" aria-label="Technologies used">
+            <span>TypeScript</span><span>Next.js</span><span>React</span><span>NestJS</span><span>MongoDB</span>
+          </div>
+          <span class="project__pending">Coming soon</span>
+        </div>
+        <div class="project__art city-preview" aria-hidden="true">
+          <div class="city-orbit city-orbit--outer"></div>
+          <div class="city-orbit city-orbit--inner"></div>
+          <div class="city-pulse"><i></i><span>City Pulse</span><small>Coming soon</small></div>
+        </div>
+      </article>
+    </section>
+
+    <section class="about section" id="about">
+      <div class="about__statement reveal">
+        <p class="eyebrow">A little about me</p>
+        <h2>Reliable systems.<br><span>Thoughtful experiences.</span></h2>
+      </div>
+      <div class="about__body reveal">
+        <p>I enjoy the part of software development where an idea becomes something real. I like thinking through the details, making thoughtful technical decisions, and seeing a product all the way into production. I’ve worked across both frontend and backend, but what matters most to me is building software that stays reliable after it ships. I like understanding how the pieces connect, solving problems at their source, and leaving the codebase better than I found it.</p>
+        <div class="capabilities">
+          <div><span>01</span><p>Full-stack product development</p></div>
+          <div><span>02</span><p>AWS infrastructure with CDK</p></div>
+          <div><span>03</span><p>APIs, integrations & production reliability</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact">
+      <div class="contact__orb" aria-hidden="true"></div>
+      <p class="eyebrow reveal">Say hello</p>
+      <h2 class="reveal">Let’s connect.</h2>
+      <p class="reveal">Whether you have a role in mind, want to collaborate, or simply want to talk about software, I’d love to hear from you.</p>
+      <a class="button button--light reveal" href="mailto:franceslee402@gmail.com"><i class="bi bi-envelope" aria-hidden="true"></i> Email me</a>
+    </section>
+  </main>
+
+  <dialog class="sudoku-dialog" data-sudoku-dialog aria-labelledby="sudoku-title">
+    <div class="sudoku-frame">
+      <h2 id="sudoku-title" class="visually-hidden">Play Calm Sudoku</h2>
+      <button type="button" class="sudoku-popup-close" aria-label="Close Sudoku" data-close-sudoku>×</button>
+      <iframe src="sudoku/index.html?embedded=1" title="Play Calm Sudoku" scrolling="no"></iframe>
     </div>
-    <!-- End #mobile-menu-toggle -->
-    <header>
-        <div id="mobile-menu-close">
-            <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
-        </div>
-        <ul id="menu" class="shadow">
-            <li>
-                <a href="#about">About</a>
-            </li>
-            <li>
-                <a href="#experience">Experience</a>
-            </li>
-            <li>
-                <a href="#education">Education</a>
-            </li>
-            <li>
-                <a href="#projects">Projects</a>
-            </li>
-            <li>
-                <a href="#skills">Skills</a>
-            </li>
-            <li>
-                <a href="#contact">Contact</a>
-            </li>
-        </ul>
-    </header>
-    <!-- End header -->
+  </dialog>
 
-    <div id="lead">
-        <div id="lead-content">
-            <h1>Frances Lee</h1>
-            <h2>Computer Science Graduate</h2>
-            <a href="Frances Lee Resume.pdf" download="Frances_Lee_Resume.pdf" class="btn-rounded-white">Download Resume</a>
-        </div>
-        <!-- End #lead-content -->
-
-        <div id="lead-overlay"></div>
-
-        <div id="lead-down">
-            <span>
-                <i class="fa fa-chevron-down" aria-hidden="true"></i>
-            </span>
-        </div>
-        <!-- End #lead-down -->
+  <footer>
+    <a class="brand" href="#top" aria-label="Back to top">FL<span>.</span></a>
+    <p>© <span data-year></span> Frances Lee</p>
+    <div>
+      <a href="https://github.com/frances402" target="_blank" rel="noreferrer"><i class="bi bi-github" aria-hidden="true"></i> GitHub</a>
+      <a href="https://linkedin.com/in/frances402" target="_blank" rel="noreferrer"><i class="bi bi-linkedin" aria-hidden="true"></i> LinkedIn</a>
     </div>
-    <!-- End #lead -->
+  </footer>
 
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h2 class="heading">About Me</h2>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                        I am a recent Computer Science graduate with proficiency in Java, Python, C++, JavaScript, and both relational and non-relational databases.
-                        I'm passionate about creating innovative solutions and constantly expanding my knowledge in the field. 
-                        My goal is to contribute my skills as a Software Engineer, Data Engineer, or QA Engineer, and meaningful impact through dedicated work.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End #about -->
-
-    <div id="experience" class="background-alt">
-        <h2 class="heading">Experience</h2>
-        <div id="experience-timeline">
-            <div data-date="August 2019 – March 2020">
-                <h3>Infosys</h3>
-                <h4>Junior Operation Associate</h4>
-                <p>
-                    <ul>
-                        <li>Collaborated with onshore counterparts to promptly resolve critical issues within timelines.</li>
-                        <li>Successfully integrated Robotic Process Automation (RPA) into the user-friendly front end Angular framework,
-                            streamlining processes and reducing manual intervention through collaborative cross-functional teams.</li>
-                        <li>Utilized Git version control for pair programming, actively participating in code review sessions to ensure efficient
-                            code collaboration and maintain high code quality standards.</li>
-                    </ul>
-                </p>
-            </div>
-        </div>
-    </div>
-    <!-- End #experience -->
-
-    <div id="education">
-        <h2 class="heading">Education</h2>
-        <div class="education-block">
-            <h3>Southern New Hampshire University</h3>
-            <span class="education-date">Oct 2022 - Dec 2023</span>
-            <h4>Bachelor of Science in Computer Science</h4>
-            <p>
-                GPA: 4.0
-            </p>
-        </div>
-        <!-- End .education-block -->
-
-        <div class="education-block">
-            <h3>Brookhaven College</h3>
-            <span class="education-date">Aug 2017 - May 2019</span>
-            <h4>Associate of Science in Computer Science</h4>
-            <p>
-                GPA: 3.83
-            </p>
-        </div>
-        <!-- End .education-block -->
-    </div>
-    <!-- End #education -->
-
-    <div id="projects" class="background-alt">
-        <h2 class="heading">Projects</h2>
-        <div class="container">
-            <div class="row">
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/Inventory.png" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>Inventory Management Android Mobile App</h3>
-                        <p>
-                            (Android Studio, SQLite, and Java)
-                            <br>
-                            Designed and developed an Android inventory management application, featuring secure login, password reset, user registration and seamless CRUD operations. Integrated SMS and Push notification alerts to notify users of low inventory levels.
-                        </p>
-                        <a href="https://gitfront.io/r/frances402/4MarZNoTTJg1/Inventory-Management-App/" target="_blank">View Project</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/Dashboard.png" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>Rescue Dog Dashboard</h3>
-                        <p>
-                            (Python, MongoDB)
-                            <br>
-                            Developed a secure web dashboard with Pandas and NumPy for data manipulation, MongoDB for storage, and Dash for the frontend. The dashboard features user authentication, MVC architecture, CRUD operations, efficient CSV data handling, and interactive data visualizations for identifying search-and-rescue dog candidates.
-                        </p>
-                        <a href="https://gitfront.io/r/frances402/KQWz59GvUykJ/Rescue-Dog-Selection-Dashboard/" target="_blank">View Project</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/TravelBackend.png" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>Travel Booking Web Application</h3>
-                        <p>
-                            (MongoDB, Express.js AngularJS, Node.js, NoSQL, RESTful API, Postman)
-                            <br>
-                            Implemented a MEAN stack-based travel booking web application with a customer-facing website utilizing MVC routing and Handlebars templating. Incorporated a NoSQL database with Mongoose integration, RESTful API, and a secure Angular-based single-page application (SPA) for administrative functions. Conducted thorough testing procedures with Postman. 
-                        </p>
-                        <a href="https://gitfront.io/r/frances402/gCSunHzN7BKj/Travel-Booking-Web-Application/" target="_blank">View Project</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-            </div>
-        </div>
-    </div>
-    <!-- End #projects -->
-
-    <div id="skills">
-        <h2 class="heading">Skills</h2>
-        <ul>
-            <li>Python</li>
-            <li>Java</li>
-            <li>C++</li>
-            <li>JavaScript</li>
-            <li>Node.js</li>
-            <li>Angular</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>Typescript</li>
-            <li>MongoDB</li>
-            <li>SQL</li>
-            <li>SQLite</li>
-            <li>XML</li>
-            <li>JSON</li>   
-        </ul>
-    </div>
-    <!-- End #skills -->
-
-    <div id="contact">
-        <h2>Get in Touch</h2>
-        <div id="contact-form">
-            <form method="POST" action="https://formspree.io/f/xvojeqpn">
-                <input type="hidden" name="_subject" value="Contact request from personal website" />
-                <input type="email" name="_replyto" placeholder="Your email" required>
-                <textarea name="message" placeholder="Your message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
-        </div>
-        <!-- End #contact-form -->
-    </div>
-    <!-- End #contact -->
-
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-5 copyright">
-                    <p>
-                        Copyright &copy; <span id="current-year">2023</span> Frances Lee | All Rights Reserved
-                    </p>
-                </div>
-                <div class="col-sm-2 top">
-                    <span id="to-top">
-                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
-                    </span>
-                </div>
-                <div class="col-sm-5 social">
-                    <ul>
-                        <li>
-                            <a href="https://github.com/frances402" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://linkedin.com/in/frances402" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- End footer -->
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/scripts.min.js"></script>
-
-    <script>
-        var password = prompt("Enter the password for access:");
-
-        if (password !== "402") {
-            alert("Incorrect password. Access denied.");
-            window.location.href = "https://www.google.com"; // Redirect to another page
-        }
-    </script>
+  <script src="js/portfolio.js"></script>
 </body>
-
 </html>
